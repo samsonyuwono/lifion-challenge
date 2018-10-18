@@ -45,7 +45,7 @@ CREATE TABLE cc_detail (
 
 CREATE TABLE streams (
   id INTEGER PRIMARY KEY,
-    video_id INTEGER
+    video_id INTEGER,
     subscriber_id INTEGER,
     length_of_stream INTEGER
 );
@@ -55,8 +55,7 @@ CREATE TABLE videos (
     video_license_id INTEGER,
     stream_id INTEGER,
     title TEXT,
-    length INTEGER,
-    views INTEGER
+    length INTEGER
 );
 
 CREATE TABLE video_licenses (
