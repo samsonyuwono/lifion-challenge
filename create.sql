@@ -20,7 +20,8 @@ CREATE TABLE monthly_invoice (
     subscriber_id INTEGER,
     payment_id INTEGER,
     subscription_plan_id INTEGER,
-    data INTEGER
+    has_paid BOOLEAN,
+    invoice_date DATE
 );
 
 CREATE TABLE payment (
