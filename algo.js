@@ -40,14 +40,14 @@ function unpaidAccounts(monthly_invoices) {
   return unpaidArr;
 }
 
-function findUsernames(subscribers) {
+function sendCancellationNotice(subscribers) {
   var sub = [];
   var unpaidAccountNumbers = unpaidAccounts(monthly_invoices);
   subscribers.forEach(subscriber => {
     if (unpaidAccountNumbers.includes(subscriber.subscriber_id)) {
       sub.push(
         subscriber.username +
-          " has not paid, please send a cancellation notice to" +
+          " has not paid, please send a cancellation notice to " +
           subscriber.email
       );
     }
@@ -55,5 +55,4 @@ function findUsernames(subscribers) {
   return sub;
 }
 
-console.log(unpaidAccounts(monthly_invoices, subscribers));
-console.log(findUsernames(subscribers));
+console.log(sendCancellationNotice(subscribers));
